@@ -9,7 +9,7 @@ using Raven.Client.Documents;
 namespace OmersBootcamp
 {
     // UNIT 1 LESSON 3 EX 1
-    // purpose: to learn how to setup db connection and fetch a document dynamiclly 
+    // purpose: to learn how to setup db connection and fetch a document dynamically 
     internal class ClientAppExample
     {
         public static void Main(string[] args)
@@ -21,7 +21,7 @@ namespace OmersBootcamp
                 Urls = new[] { "http://localhost:8080" },
                 Database = "Northwind"
             };
-            // after the 'initialize' invokation, the DocumentStore obj points at some db server instance (URL & dbName combination).
+            // after the 'initialize' invocation, the DocumentStore obj points at some db server instance (URL & dbName combination).
             documentStore.Initialize();
 
             // opening new session obj allows us to preform any operation on the DB

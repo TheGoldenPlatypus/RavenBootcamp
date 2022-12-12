@@ -37,14 +37,14 @@ namespace OmersBootcamp
                 });
 
                 // # purpose 3
-                // some docs have properties that are referencig to other docs.
-                // for example: if you have a 'product' doc and it has a propperty 'category' that refers to another doc,
-                //              spliting it by loading the 'product' doc and afterwards the 'category' doc will cost us a lot
-                //              in terms of performence.
-                //              solution: using 'Include' which will activte the following chain:
+                // some docs have properties that are referencing to other docs.
+                // for example: if you have a 'product' doc and it has a  'category' property that refers to another doc,
+                //              splitting it by loading the 'product' doc and afterwards the 'category' doc will cost us a lot
+                //              in terms of performance.
+                //              solution: using 'Include' which will activate the following chain:
                 //                        find a document with the requested ID -> read its Category property value ->
                 //                        find a document with that ID -> send both documents back to the client.
-                // conclusion: when the last line is excecuted, the document is in the session cache and no additional remote call is made.
+                // conclusion: when the last line is executed, the document is in the session cache and no additional remote call is made.
                 var p = session
                     .Include<Product>(x => x.Category)
                     .Load("products/1-A");
@@ -53,9 +53,5 @@ namespace OmersBootcamp
         }
 
     }
-    public class Category
-    {
-        public string Description { get; set; }
-        public string Name { get; set; }
-    }
+
 }
