@@ -10,6 +10,7 @@ namespace OmersBootcamp.Unit2
     {
         public string Id { get; set; }
         public string Company { get; set; }
+        public string Employee { get; set; }
         public DateTimeOffset OrderedAt { get; set; }
     }
 

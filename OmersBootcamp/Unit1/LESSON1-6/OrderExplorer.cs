@@ -44,6 +44,7 @@ namespace OmersBootcamp
         {
             using (var session = DocumentStoreHolder.Store.OpenSession())
             {
+                // Include function ensures that all data is returned from the server in a single response.
                 var order = session
                     .Include<Order>(o => o.Company)
                     .Include(o => o.Employee)
